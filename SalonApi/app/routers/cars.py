@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from typing import List
 
-from database import get_arrived_db
-from managers.car_manager import car_manager
-from models.user_models import CarCreate, CarResponse
+from app.database import get_arrived_db,get_purchased_db
+from app.managers.car_manager import car_manager
+from app.models.user_models import CarCreate, CarResponse
 
 router = APIRouter(prefix="/cars", tags=["cars"])
 

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from app.database import create_tables
-from routers.cars import router as cars_router
-from routers.purchases import router as purchases_router
+from app.routers.cars import router as cars_router
+from app.routers.purchases import router as purchases_router
 
 create_tables()
 
@@ -12,8 +12,8 @@ app = FastAPI(
 )
 
 
-app.include_router(cars.router)
-app.include_router(purchases.router)
+app.include_router(cars_router)
+app.include_router(purchases_router)
 
 @app.get("/")
 def read_root():

@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models.car_models import Base
+from app.models.car_models import Base
 
 
 ARRIVED_CARS_DB_URL = "sqlite:///./arrived_cars.db"

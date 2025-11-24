@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from typing import List, Optional
-from models.car_models import ArrivedCar, PurchasedCar
-from models.user_models import CarCreate, PurchaseCreate
+from app.models.car_models import ArrivedCar, PurchasedCar  
+from app.models.user_models import CarCreate, PurchaseCreate
 
 class CarManager:
     def __init__(self):
